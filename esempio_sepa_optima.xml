@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<CBIPaymentRequest xmlns="urn:CBI:xsd:CBIPaymentRequest.00.04.00">
+  <GrpHdr>
+    <MsgId>OPT2015BNAPOLI0000000049</MsgId>
+    <CreDtTm>2015-11-10T16:35:30</CreDtTm>
+    <NbOfTxs>1</NbOfTxs>
+    <CtrlSum>63623.00</CtrlSum>
+    <InitgPty>
+      <Nm>OPTIMA  ITALIA S.P.A.</Nm>
+      <Id>
+        <OrgId>
+          <Othr>
+            <Id>0050716V</Id>
+            <Issr>CBI</Issr>
+          </Othr>
+        </OrgId>
+      </Id>
+    </InitgPty>
+  </GrpHdr>
+  <PmtInf>
+    <PmtInfId>OPT2015BNAPOLI0000000049</PmtInfId>
+    <PmtMtd>TRF</PmtMtd>
+    <PmtTpInf>
+      <SvcLvl>
+        <Cd>SEPA</Cd>
+      </SvcLvl>
+    </PmtTpInf>
+    <ReqdExctnDt>2015-11-10</ReqdExctnDt>
+    <Dbtr>
+      <Nm>OPTIMA  ITALIA S.P.A.</Nm>
+      <Id>
+        <OrgId>
+          <Othr>
+            <Id>07469040633</Id>
+            <Issr>CBI</Issr>
+          </Othr>
+        </OrgId>
+      </Id>
+    </Dbtr>
+    <DbtrAcct>
+      <Id>
+        <IBAN>IT04D0101003403100000005727</IBAN>
+      </Id>
+    </DbtrAcct>
+    <DbtrAgt>
+      <FinInstnId>
+        <ClrSysMmbId>
+          <MmbId>01010</MmbId>
+        </ClrSysMmbId>
+      </FinInstnId>
+    </DbtrAgt>
+    <ChrgBr>SLEV</ChrgBr>
+    <CdtTrfTxInf>
+      <PmtId>
+        <InstrId>1</InstrId>
+        <EndToEndId>OPT-1500001393</EndToEndId>
+      </PmtId>
+      <PmtTpInf>
+        <CtgyPurp>
+          <Cd>SUPP</Cd>
+        </CtgyPurp>
+      </PmtTpInf>
+      <Amt>
+        <InstdAmt Ccy="EUR">63623.00</InstdAmt>
+      </Amt>
+      <Cdtr>
+        <Nm>Fly S.r.l.</Nm>
+        <PstlAdr>
+          <Ctry>IT</Ctry>
+          <AdrLine>Via Passariello, 93</AdrLine>
+          <AdrLine>80038</AdrLine>
+        </PstlAdr>
+      </Cdtr>
+      <CdtrAcct>
+        <Id>
+          <IBAN>IT33D0101003403100000007145</IBAN>
+        </Id>
+      </CdtrAcct>
+      <RmtInf>
+        <Ustrd>11 31/10/15</Ustrd>
+      </RmtInf>
+    </CdtTrfTxInf>
+  </PmtInf>
+</CBIPaymentRequest>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<CBIPaymentRequest xmlns="urn:CBI:xsd:CBIPaymentRequest.00.04.00">
+  <GrpHdr>
+    <MsgId>DistintaXml-20160225-082431</MsgId>
+    <CreDtTm>2016-02-25T08:24:31.143679</CreDtTm>
+    <NbOfTxs>1</NbOfTxs>
+    <CtrlSum>50.12</CtrlSum>
+    <InitgPty>
+      <Nm>Sample Business S.P.A.</Nm>
+      <Id>
+        <OrgId>
+          <Othr>
+            <Id>0123456A</Id>
+            <Issr>CBI</Issr>
+          </Othr>
+        </OrgId>
+      </Id>
+    </InitgPty>
+  </GrpHdr>
+  <PmtInf>
+    <PmtInfId>DistintaXml-20160225-082431</PmtInfId>
+    <PmtMtd>TRF</PmtMtd>
+    <PmtTpInf>
+      <SvcLvl>
+        <Cd>SEPA</Cd>
+      </SvcLvl>
+    </PmtTpInf>
+    <ReqdExctnDt>2016-02-25</ReqdExctnDt>
+    <Dbtr>
+      <Nm>Sample Business S.P.A.</Nm>
+      <Id>
+        <OrgId/>
+      </Id>
+    </Dbtr>
+    <DbtrAcct>
+      <Id>
+        <IBAN>IT39P0604015400000000138416</IBAN>
+      </Id>
+    </DbtrAcct>
+    <DbtrAgt>
+      <FinInstnId>
+        <ClrSysMmbId>
+          <MmbId>06040</MmbId>
+        </ClrSysMmbId>
+      </FinInstnId>
+    </DbtrAgt>
+    <ChrgBr>SLEV</ChrgBr>
+    <CdtTrfTxInf>
+      <PmtId>
+        <InstrId>1</InstrId>
+        <EndToEndId>DistintaXml-20160225-082431-000001</EndToEndId>
+      </PmtId>
+    <PmtTpInf>
+      <CtgyPurp>
+        <Cd>SUPP</Cd>
+      </CtgyPurp>
+    </PmtTpInf>
+    <Amt>
+      <InstdAmt Ccy="EUR">50.12</InstdAmt>
+    </Amt>
+    <Cdtr>
+      <Nm>John Smith</Nm>
+      <Id><OrgId/></Id>
+    </Cdtr>
+    <CdtrAcct>
+      <Id>
+        <IBAN>IT83D0760101000000010741106</IBAN>
+      </Id>
+    </CdtrAcct>
+    <RmtInf>
+      <Ustrd>Expense reimbursement</Ustrd>
+    </RmtInf>
+  </CdtTrfTxInf>
+</PmtInf>
+</CBIPaymentRequest>
