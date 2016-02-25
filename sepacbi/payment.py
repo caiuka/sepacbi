@@ -200,15 +200,15 @@ class Payment(AttributeCarrier):
             etree.SubElement(info, 'BtchBookg').text = booltext(self.batch)
 
         # Priority
+#        if hasattr(self, 'high_priority'):
+        tp_info = etree.SubElement(info, 'PmtTpInf')
         if hasattr(self, 'high_priority'):
-            tp_info = etree.SubElement(info, 'PmtTpInf')
-            if hasattr(self, 'high_priority'):
-                priority_text = 'NORM'
-                if self.high_priority:
-                    priority_text = 'HIGH'
-                etree.SubElement(tp_info, 'InstrPrty').text = priority_text
-            svclvl = etree.SubElement(tp_info, 'SvcLvl')
-            etree.SubElement(svclvl, 'Cd').text = 'SEPA'
+            priority_text = 'NORM'
+            if self.high_priority:
+                priority_text = 'HIGH'
+            etree.SubElement(tp_info, 'InstrPrty').text = priority_text
+        svclvl = etree.SubElement(tp_info, 'SvcLvl')
+        etree.SubElement(svclvl, 'Cd').text = 'SEPA'
 
         # Execution date: either today or specified date
         execution_date = date.today()
