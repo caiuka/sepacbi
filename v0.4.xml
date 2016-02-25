@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<CBIPaymentRequest xmlns="urn:CBI:xsd:CBIPaymentRequest.00.04.00">
+  <GrpHdr>
+    <MsgId>DistintaXml-20160225-141635</MsgId>
+    <CreDtTm>2016-02-25T14:16:35.340691</CreDtTm>
+    <NbOfTxs>1</NbOfTxs>
+    <CtrlSum>50.12</CtrlSum>
+    <InitgPty>
+      <Nm>Easy Life s.r.l.</Nm>
+      <Id>
+        <OrgId>
+          <Othr>
+            <Id>1397200L</Id>
+            <Issr>CBI</Issr>
+          </Othr>
+        </OrgId>
+      </Id>
+    </InitgPty>
+  </GrpHdr>
+  <PmtInf>
+    <PmtInfId>DistintaXml-20160225-141635</PmtInfId>
+    <PmtMtd>TRF</PmtMtd>
+    <PmtTpInf>
+      <SvcLvl>
+        <Cd>SEPA</Cd>
+      </SvcLvl>
+    </PmtTpInf>
+    <ReqdExctnDt>2016-02-25</ReqdExctnDt>
+    <Dbtr>
+      <Nm>Easy Life s.r.l.</Nm>
+      <Id>
+        <OrgId>
+          <Othr>
+            <Id>02405500204</Id>
+            <Issr>CBI</Issr>
+          </Othr>
+        </OrgId>
+      </Id>
+    </Dbtr>
+    <DbtrAcct>
+      <Id>
+        <IBAN>IT04T0101003403100000006006</IBAN>
+      </Id>
+    </DbtrAcct>
+    <DbtrAgt>
+      <FinInstnId>
+        <ClrSysMmbId>
+          <MmbId>01010</MmbId>
+        </ClrSysMmbId>
+      </FinInstnId>
+    </DbtrAgt>
+    <ChrgBr>SLEV</ChrgBr>
+    <CdtTrfTxInf>
+      <PmtId>
+        <InstrId>1</InstrId>
+        <EndToEndId>DistintaXml-20160225-141635-000001</EndToEndId>
+      </PmtId>
+      <PmtTpInf>
+        <CtgyPurp>
+          <Cd>SUPP</Cd>
+        </CtgyPurp>
+      </PmtTpInf>
+      <Amt>
+        <InstdAmt Ccy="EUR">50.12</InstdAmt>
+      </Amt>
+      <Cdtr>
+        <Nm>Lisa Lagni</Nm>
+        <Id>
+          <OrgId/>
+        </Id>
+      </Cdtr>
+      <CdtrAcct>
+        <Id>
+          <IBAN>IT08W0200811802000102833784</IBAN>
+        </Id>
+      </CdtrAcct>
+      <RmtInf>
+        <Ustrd>Rimborso Spese</Ustrd>
+      </RmtInf>
+    </CdtTrfTxInf>
+  </PmtInf>
+</CBIPaymentRequest>
