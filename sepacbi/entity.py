@@ -130,7 +130,8 @@ class IdHolder(AttributeCarrier):
 
         # Tax code
         if hasattr(self, 'cf'):
-            orgid.append(emit_id_tag(self.cf, 'ADE'))
+            orgid.append(emit_id_tag(self.cf, 'CBI'))
+#            orgid.append(emit_id_tag(self.cf, 'ADE'))
 
         if hasattr(self, 'code'):
             orgid.append(emit_id_tag(self.code, None))
