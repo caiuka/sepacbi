@@ -154,11 +154,19 @@ class Payment(AttributeCarrier):
             tag = 'CBIPaymentRequest'
         schema = tag + '.00.04.00'
         xmlns = 'urn:CBI:xsd:' + schema
+####
+        pain_ns = {
+#            'xsi': 'http://www.w3.org/2001/XMLSchema-instance',
+            None: 'urn:CBI:xsd:CBIPaymentRequest.00.04.00',
+        }
+        root = etree.Element(tag, nsmap=pain_ns)
+####
         schema_location = xmlns + ' ' + schema + '.xsd'
-        root = etree.Element(
-            '{%s}%s' % (xmlns, tag),
-            attrib={'{%s}schemaLocation' % xsi: schema_location},
-            nsmap={'xsi': xsi, None: xmlns})
+#        root = etree.Element(
+#            '{%s}%s' % (xmlns, tag),
+#            attrib={'{%s}schemaLocation' % xsi: schema_location},
+#            nsmap={'xsi': xsi, None: xmlns}
+#        )
         outer = root
         if self.envelope:
             root = etree.SubElement(root, 'CBIEnvelPaymentRequest')

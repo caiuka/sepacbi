@@ -35,3 +35,4 @@ You will the obtain the generated XML request by invoking::
 
 	payment.xml_text()
 
+
