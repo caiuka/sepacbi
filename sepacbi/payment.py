@@ -155,12 +155,6 @@ class Payment(AttributeCarrier):
         schema = tag + '.00.04.00'
         xmlns = 'urn:CBI:xsd:' + schema
 ####
-        decl_ns={
-            'xml_declaration': 'True',
-            'encoding': 'UTF-8',
-            'standalone': "yes"
-        }
-        etree.Element('xml', nsmap=decl_ns)
         pain_ns = {
 #            'xsi': 'http://www.w3.org/2001/XMLSchema-instance',
             None: 'urn:CBI:xsd:CBIPaymentRequest.00.04.00',
@@ -258,7 +252,9 @@ class Payment(AttributeCarrier):
         """
         Return the XML structure as a string.
         """
-        return etree.tostring(self.xml(), **kwargs)
+#        return etree.tostring(self.xml(), **kwargs)
+        return etree.tostring(self.xml(), pretty_print=True, encoding='UTF-8', xml_declaration=True, standalone="yes",
+                              **kwargs)
 
     def cbi_text(self):
         self.perform_checks()
