@@ -122,6 +122,10 @@ class IdHolder(AttributeCarrier):
             id_container = 'OrgId'
         orgid = etree.SubElement(idtag, id_container)
 
+#### Elimina il nodo Id/OrgId per il creditore
+        if not as_initiator:
+            etree.strip_elements(root, 'Id', with_tail=False)
+
         # CUC
         if as_initiator:
             if not hasattr(self, 'cuc'):
