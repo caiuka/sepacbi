@@ -15,9 +15,10 @@ STR_ITEM_RE = re.compile(r'^(\d+)(!?)([nac])')
 
 
 class InvalidIBANError(Exception):
-    "Raised when an IBAN does not pass the formal checks."
+    """
+    Raised when an IBAN does not pass the formal checks.
+    """
     pass
-
 
 def structure_to_re(structure):
     """
@@ -75,7 +76,7 @@ def validate_check_digits(iban):
     converted = int(''.join(str(int(ch, 36)) for ch in iban))
 
     if int(converted) % 97 != 1:
-        raise InvalidIBANError('Invalid check digits')
+        raise InvalidIBANError('Invalid check digits for IBAN:%s' % iban)
 
 
 def validate(iban):
@@ -84,12 +85,12 @@ def validate(iban):
     # Do we know the country?
     country = iban[:2]
     if country not in COUNTRY_RE:
-        raise InvalidIBANError('Invalid country code')
+        raise InvalidIBANError('Invalid country code for IBAN:%s' % iban)
 
     # Is the formal structure valid?
     if not COUNTRY_RE[country].match(iban):
-        raise InvalidIBANError('Invalid IBAN structure for country %s'
-                               % country)
+        raise InvalidIBANError('Invalid IBAN structure for country %s and IBAN:%s'
+                               % (country, iban))
 
     # Are the check digits valid?
     validate_check_digits(iban)
